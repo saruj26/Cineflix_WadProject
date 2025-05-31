@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar_header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  background: #021347;
+}
+
+#chk1 {
+  display: none;
+}
+
+.menu i {
+  color: #f9fafb;
+  cursor: pointer;
+}
+
+.menu i:hover {
+  color: antiquewhite;
+}
+
+header .logo {
+  flex: 1;
+  margin-left: 50px;
+}
+
+header .logo img {
+  width: 200px;
+}
+
+header ul {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+header ul li a:hover {
+  border-bottom: 3px solid rgb(56, 204, 209);
+}
+
+header .login {
+  margin-right: 20px;
+}
+
+header .login a {
+  background-color: #38ccd1;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .login a:hover {
+  background-color: #2ca9ab;
+}
+
+header .menu {
+  font-size: 2rem;
+  display: none;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+.login-mobile{
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  header ul {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background: rgba(13, 28, 71, 0.89);
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+
+  header ul li {
+    padding: 30px 0;
+  }
+
+  header .login {
+    display: none;
+  }
+
+  header .login-mobile {
+    display: block;
+  }
+
+  header .menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  header .logo {
+    margin-left: 8px;
+  }
+
+  header ul {
+    width: 100%;
+  }
+}

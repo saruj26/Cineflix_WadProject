@@ -1,0 +1,162 @@
+/* styles.css */
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.movie-card {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.movie-card img {
+    border-radius: 10px;
+    margin-right: 20px;
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.details {
+    max-width: 600px;
+}
+
+.rating, .buttons {
+    margin-top: 10px;
+}
+.buttons form input[]{
+    background-color: black;
+    color: white;
+}
+.btn-play {
+    background-color: #e50914;
+    border: none;
+    margin-top: 20px;
+}
+
+.btn-play:hover {
+    background-color: #f6121d;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space items evenly */
+    padding: 15px 50px;
+    background: #121212; /* Dark background for the header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease;
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 2rem; /* Space between menu items */
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    transition: color 0.3s ease, background 0.3s ease;
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+.navbar a:hover {
+    color: #38ccd1; /* Highlight color for text on hover */
+    background: #1e1e1e; /* Slightly lighter dark background on hover */
+}
+
+.navbar a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #38ccd1; /* Highlight color for active link */
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar .home-active::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff; /* White icon color */
+    display: none; /* Hidden by default */
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: #38ccd1; /* Button background color */
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: #2ca9ab; /* Darker button color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide menu items on small screens */
+        flex-direction: column;
+        width: 100%;
+        background: #121212; /* Dark background for mobile menu */
+        position: absolute;
+        top: 60px; /* Position below header */
+        left: 0;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar.active {
+        display: flex; /* Show menu items when active */
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar a {
+        font-size: 1.2rem; /* Larger font size for mobile */
+        padding: 0.5rem 1rem;
+    }
+}

@@ -1,0 +1,168 @@
+.footer {
+    background-color: #222;
+    color: #8e8e8e;
+  }
+  
+  .footer h5 {
+    color: #fff;
+  }
+  
+  .footer a {
+    color: #8e8e8e;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #76d477;
+    transform: translateX(5px);
+  }
+  
+  .footer .btn-floating {
+    font-size: 16px;
+    width: 38px;
+    height: 38px;
+    margin: 0 4px;
+  }
+  
+  .footer .quick-links a {
+    color: #8e8e8e;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .footer .quick-links a:hover {
+    color: #48ccd0;
+    transform: translateX(5px);
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+  
+  .wrapper {
+    display: flex;
+    justify-content:flex-start ;
+  }
+  .button {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+    background: #fff;
+    border-radius: 50px; /*50% to 50px*/
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+  }
+  
+  .icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%; /*50% to 50px*/
+    box-sizing: border-box; /* newly added */
+    line-height: 40px;
+    transition: all 0.3s ease-out;
+  }
+  .button:nth-child(1):hover .icon {
+    background: #4267b2;
+  }
+  .button:nth-child(2):hover .icon {
+    background: #333;
+  }
+  .button:nth-child(3):hover .icon {
+    background: #e1306c;
+  }
+  .button:nth-child(4):hover .icon {
+    background: #f00707;
+  }
+  
+  .icon i {
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px; /*newly added*/
+    color: #000;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover .icon i {
+    color: #fff;
+  }
+
+  .fb-form {
+    width: 220px;
+    
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .form-control.btn {
+    width: 100px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-control.btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 15px;
+  }
+  
+  .rating .fa-star {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right:10px ;
+    color: #ddd;
+  }
+  
+  .rating .fa-star.selected {
+    color: #ffca28;
+  }
+  
+  
+  .review{
+    justify-content:center ;
+}
+
+
+  
+  @media (max-width: 768px) {
+    .footer {
+      justify-content: center;
+  
+      text-align: center;
+    }
+    .footer .wrapper {
+      justify-content:center ;
+    }
+   
+    .review{
+        justify-content:center;
+    }
+    
+    .button {
+      margin-bottom: 10px;
+    }
+    .button:hover {
+      width: 40px;
+    }
+    .button span {
+      display: none;
+    }
+  }

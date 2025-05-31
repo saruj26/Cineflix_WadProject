@@ -1,0 +1,186 @@
+body{
+    background: linear-gradient(180deg, rgba(6,7,8,1) 28%, rgba(26,30,36,1) 61%, rgba(44,48,53,1) 100%, rgba(255,255,255,1) 100%);
+height: 88vh;
+}
+
+#row1{
+    margin-top: 5%;
+    height: 600px;
+    overflow: hidden;
+    background-color:transparent;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+#row2 ,#row2SecondForm{
+    height: 100% ;
+    width: 100%;
+    margin: auto;
+}
+#imgSection{
+    height: 100% ;
+    padding: 0;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
+}
+#imgSection img{
+    object-fit: cover;
+}
+#loginSection{
+    border-radius: 0 16px 16px 0;
+    overflow: hidden;
+    background-color: white;
+    height: auto;
+}
+#signIn{
+    font-weight: 700;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.container2{
+    margin-top: 30% !important;
+}
+#hidePopupButton{
+    position: absolute;
+    top:20px;
+    left:82%;
+    background-color: transparent;
+    border: none;
+}
+
+.secondForm{
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.secondFormSubmit{
+    width: 88%;
+    margin: auto;
+    background-color: #151313;
+    color: white;
+    border: none;
+
+}
+
+#forgotPasswordSecondForm{
+    color: grey;
+}
+
+.secondFormSubmit form label{
+    font-size: 13px;
+}
+
+#container label{
+     font-size: 13px;
+    color: grey;
+}
+
+#alertContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 300px;
+    background-color: darkred;
+    border-color: darkred;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: none;
+    animation: slideInRight 0.5s ease-out forwards;
+}
+
+/* CSS for the loading spinner */
+#spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.spinner-border {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.dot-animation {
+    animation: dot-blink 1.5s infinite;
+}
+
+@keyframes dot-blink {
+    0%, 20%, 80%, 100% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+
+
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 961px) {
+    #hidePopupButton{
+        top:10px;
+    }
+    #row1{
+        height: 540px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    #row1{
+     position: relative;
+        right: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #container {
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .container2{
+        display: none;
+    }
+}
