@@ -22,4 +22,6 @@
 - **Database**: MySQL
 - **Tools**: XAMPP, Git, GitHub
 
----
+
+
+![image alt](https://github.com/saruj26/Cineflix_WadProject/blob/8233e6dcaf080697ce125c77d41a2ecc55c0eeee/Cineflix_WadProject.png)
